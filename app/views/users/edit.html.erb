@@ -1,0 +1,19 @@
+<div class="edit">
+  <h2>Edit your profile</h2>
+ <%= form_tag("/users/#{@current_user.id}/update") do %>
+   <ul>
+     <li>email</li>
+     <input type="text" name="email" value=<%= "#{@current_user.email}" %>>
+     <li>name</li>
+     <input type="text" name="name" value=<%= "#{@current_user.name}" %>>
+
+     <li>self introduction</li>
+     <textarea name="introduction" rows="8"><%="#{@current_user.introduction}"%></textarea> 
+     <br><input type="submit" value="edit" align="bottom">
+   </ul>
+
+ <% end %>
+
+
+
+</div>

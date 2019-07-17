@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Bitter|DM+Serif+Text&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="header">
+      <% if session[:user_id] == nil %>
+        <ul >
+          <li class = "twitter"><%= link_to("Twittttter", "/", style: "color:white" ) %></li>
+          <li class= "right"><%= link_to("login", "/login", style: "color:white") %></li>
+
+        </ul>
+      <% else %>
+        <ul >
+          <li class = "twitter"><%= link_to("Twittttter",   "/users/#{@current_user.id}/show", style: "color:white" ) %></li>
+          <li class= "right"><%= link_to("logout", "/logout", style: "color:white") %></li>
+          <img class= "right" src="#{@current_user.img_name}">
+
+        </ul>
+      <% end %>
+    </div class="header">
+    <%= yield %>
+  </body>
+</html>

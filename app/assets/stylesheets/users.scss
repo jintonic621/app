@@ -1,0 +1,53 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.main{
+  width: 100%;
+  height:calc(100% - 84px);
+  padding:0px;
+  margin:0px;
+
+}
+
+.login{
+  margin:0 auto;
+  width: 30%;
+  height:auto;
+  background-color: white;
+  padding: 5px, 15px;
+  font-family: 'DM Serif Text', serif;
+}
+
+
+ul{
+  text-align: 0, auto;
+}
+
+.mypage{
+  width: 100%;
+  height: calc(100% - 64px);
+  padding:0px;
+  margin:0px;
+
+}
+
+.signup, .login{
+  margin-top: 20px;
+}
+
+.mid{float:left;}
+
+.introduction{
+  height :100%;
+  width :40%;
+  
+}
+
+.post{
+  height:100%;
+  width: 60%;
+}
+
+.edit{
+  float:left;
+}

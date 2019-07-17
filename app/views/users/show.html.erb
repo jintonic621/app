@@ -1,0 +1,17 @@
+<div class="mypage">
+  <div class="mid introduction">
+    <ul class= >
+
+      <li class="edit"><img src="/users_img/#{@current_user.img_name}"></li>
+      <li class="edit"><h2><%= @current_user.name %></h2></li>
+       <a href= <%= "/users/#{@current_user.id}/edit" %>> <li class="edit"><i class="fas fa-cog fa-lg"></i></li> </a>
+    </ul>
+    <p><%= @current_user.introduction %></p>
+
+  </div>
+
+  <div class="mid post">
+
+  </div>
+
+</div>
